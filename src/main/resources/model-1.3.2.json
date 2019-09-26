@@ -1,0 +1,2014 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "local insurance",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "give me a moment",
+                        "i forgot",
+                        "nevermind",
+                        "disregard",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PendingClaimsIntent",
+                    "slots": [
+                        {
+                            "name": "PendingClaimDuration",
+                            "type": "AMAZON.DURATION"
+                        },
+                        {
+                            "name": "PendingClaimDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "PendingClaimType",
+                            "type": "ClaimStatus"
+                        }
+                    ],
+                    "samples": [
+                        "how many {PendingClaimType} claims do i have",
+                        "Do I have any {PendingClaimType} claims",
+                        "Are any of my claims {PendingClaimType} ",
+                        "claims for {PendingClaimDuration}",
+                        "Did I have any claims around {PendingClaimDate}",
+                        "pending claims for {PendingClaimDuration}",
+                        "how many claims are currently {PendingClaimType}",
+                        "What are my {PendingClaimType} claims"
+                    ]
+                },
+                {
+                    "name": "CreateClaimIntent",
+                    "slots": [
+                        {
+                            "name": "CreateClaimDescription",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{CreateClaimDescription}"
+                            ]
+                        },
+                        {
+                            "name": "CreateClaimAmount",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "amount is {CreateClaimAmount} dollars",
+                                "{CreateClaimAmount}",
+                                "{CreateClaimAmount} dollars",
+                                "the claim amount is {CreateClaimAmount} dollars"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "create claim",
+                        "new claim for the amount of {CreateClaimAmount}",
+                        "new claim"
+                    ]
+                },
+                {
+                    "name": "SearchClaimIntent",
+                    "slots": [
+                        {
+                            "name": "SearchClaimText",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "i dont know my claim id",
+                                "my claim number is {SearchClaimText}",
+                                "the claim id is {SearchClaimText}",
+                                "the claim number is {SearchClaimText}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "what about my claim {SearchClaimText}",
+                        "where is my claim number {SearchClaimText} ",
+                        "claim details",
+                        "search claim",
+                        "find claim",
+                        "details on claim {SearchClaimText}",
+                        "search claim {SearchClaimText}",
+                        "whats the status of {SearchClaimText}",
+                        "check status of {SearchClaimText}",
+                        "status of {SearchClaimText} ",
+                        "What is the status of claim {SearchClaimText} "
+                    ]
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BenefitsDetailsIntent",
+                    "slots": [
+                        {
+                            "name": "PolicyDetailType",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "it's {PolicyDetailType}",
+                                "i'll choose {PolicyDetailType}",
+                                "i'll go with {PolicyDetailType}",
+                                "{PolicyDetailType}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "details for my {PolicyDetailType} policy",
+                        "policy details",
+                        "Tell me my policy details",
+                        "tell me my {PolicyDetailType} benefits",
+                        "tell me my benefits",
+                        "i need to know my benefits",
+                        "tell me benefit details for {PolicyDetailType} plan",
+                        "i want to know my {PolicyDetailType} benefit details",
+                        "what are my {PolicyDetailType} benefit details",
+                        "what are my current benefit details",
+                        "I want to know the benefit details",
+                        "Please tell me benefit details"
+                    ]
+                },
+                {
+                    "name": "FindDoctorIntent",
+                    "slots": [
+                        {
+                            "name": "PolicyDetailType",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "i'll go with {PolicyDetailType}",
+                                "{PolicyDetailType} doctor",
+                                "i will go with the {PolicyDetailType}",
+                                "i am looking for {PolicyDetailType}",
+                                "{PolicyDetailType}"
+                            ]
+                        },
+                        {
+                            "name": "MedicalSpeciality",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "i'll go with {MedicalSpeciality}",
+                                "i wanna find {MedicalSpeciality}",
+                                "{MedicalSpeciality} doctor",
+                                "{MedicalSpeciality}"
+                            ]
+                        },
+                        {
+                            "name": "DentalSpeciality",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "i'll go with {DentalSpeciality}",
+                                "i wanna find {DentalSpeciality}",
+                                "{DentalSpeciality} dentist",
+                                "{DentalSpeciality}"
+                            ]
+                        },
+                        {
+                            "name": "ZipCode",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "it's {ZipCode}",
+                                "zip code is {ZipCode}",
+                                "my zip code is {ZipCode}",
+                                "{ZipCode}"
+                            ]
+                        },
+                        {
+                            "name": "InOutNetwork",
+                            "type": "InOutNetwork",
+                            "samples": [
+                                "{InOutNetwork}"
+                            ]
+                        },
+                        {
+                            "name": "SortPreference",
+                            "type": "DoctorSortPreference",
+                            "samples": [
+                                "By {SortPreference}",
+                                "{SortPreference}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "I need a medical practitioner",
+                        "search a medical practitioner",
+                        "I need a doctor",
+                        "In {ZipCode} find me a {MedicalSpeciality}",
+                        "find a {MedicalSpeciality}",
+                        "search doctor in zip code {ZipCode}",
+                        "search a doctor",
+                        "want to know in network doctors"
+                    ]
+                },
+                {
+                    "name": "AddDepenIntent",
+                    "slots": [
+                        {
+                            "name": "VoicePin",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{VoicePin}"
+                            ]
+                        },
+                        {
+                            "name": "FirstName",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "samples": [
+                                "first name is {FirstName}",
+                                "{FirstName}"
+                            ]
+                        },
+                        {
+                            "name": "LastName",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "last name is {LastName}",
+                                "{LastName}"
+                            ]
+                        },
+                        {
+                            "name": "DateOfBirth",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "it's {DateOfBirth}",
+                                "birth date is {DateOfBirth}",
+                                "{DateOfBirth}"
+                            ]
+                        },
+                        {
+                            "name": "Gender",
+                            "type": "Gender",
+                            "samples": [
+                                "is a {Gender}",
+                                "{Gender}"
+                            ]
+                        },
+                        {
+                            "name": "Relationship",
+                            "type": "Relationship",
+                            "samples": [
+                                "is my {Relationship}",
+                                "{Relationship}"
+                            ]
+                        },
+                        {
+                            "name": "Phone",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{Phone}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Add my {Relationship} to my Policy",
+                        "Add my {Relationship} to my account",
+                        "Add a family member",
+                        "Add a dependent"
+                    ]
+                },
+                {
+                    "name": "FeedbackIntent",
+                    "slots": [
+                        {
+                            "name": "UsabilityRating",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{UsabilityRating} out of five",
+                                "i'll give {UsabilityRating}",
+                                "{UsabilityRating}"
+                            ]
+                        },
+                        {
+                            "name": "ContentRating",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{ContentRating} out of five",
+                                "i'll give {ContentRating}",
+                                "{ContentRating}"
+                            ]
+                        },
+                        {
+                            "name": "RecommendRating",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{RecommendRating} out of five",
+                                "i'll give {RecommendRating}",
+                                "{RecommendRating}"
+                            ]
+                        },
+                        {
+                            "name": "SkillRating",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "well {SkillRating}",
+                                "i'll give {SkillRating}",
+                                "Overall {SkillRating}",
+                                "{SkillRating}"
+                            ]
+                        },
+                        {
+                            "name": "FeedbackText",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{FeedbackText}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "give feedback",
+                        "Provide feedback"
+                    ]
+                },
+                {
+                    "name": "MailOrderPrescriptionIntent",
+                    "slots": [
+                        {
+                            "name": "PrescriptionDate",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "{PrescriptionDate}"
+                            ]
+                        },
+                        {
+                            "name": "MedicineName",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "add {MedicineName}",
+                                "{MedicineName}"
+                            ]
+                        },
+                        {
+                            "name": "MedicineQuantity",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{MedicineQuantity}"
+                            ]
+                        },
+                        {
+                            "name": "ContinuePrescription",
+                            "type": "Confirmation",
+                            "samples": [
+                                "{ContinuePrescription}"
+                            ]
+                        },
+                        {
+                            "name": "DeliveryAddressType",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "any {DeliveryAddressType} address",
+                                "{DeliveryAddressType} address",
+                                "{DeliveryAddressType}"
+                            ]
+                        },
+                        {
+                            "name": "DeliveryAddress",
+                            "type": "AMAZON.StreetAddress"
+                        }
+                    ],
+                    "samples": [
+                        "Order medicines",
+                        "Add prescription",
+                        "request mail in prescriptions",
+                        " prescriptions mail delivery",
+                        "Mail order medicines",
+                        "Mail order prescription"
+                    ]
+                },
+                {
+                    "name": "CustomerSupportIntent",
+                    "slots": [],
+                    "samples": [
+                        "I need support",
+                        "Customer Care",
+                        "Customer Support"
+                    ]
+                },
+                {
+                    "name": "UpdatePersonalInfoIntent",
+                    "slots": [
+                        {
+                            "name": "VoicePin",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{VoicePin}"
+                            ]
+                        },
+                        {
+                            "name": "FirstName",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "samples": [
+                                "{FirstName}"
+                            ]
+                        },
+                        {
+                            "name": "PersonalInfo",
+                            "type": "PersonalInfo",
+                            "samples": [
+                                "update {PersonalInfo}",
+                                "i wanna update {PersonalInfo}",
+                                "{PersonalInfo}"
+                            ]
+                        },
+                        {
+                            "name": "ParamValue",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{ParamValue}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "update personal information",
+                        "update demographic details",
+                        "Update personal details"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "AMAZON.Actor",
+                    "values": [
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "all"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "vision",
+                                "synonyms": [
+                                    "optical insurance",
+                                    "optical",
+                                    "eye insurance"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "dental",
+                                "synonyms": [
+                                    "teeth",
+                                    "dental insurance"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "medical",
+                                "synonyms": [
+                                    "medical insurance",
+                                    "medical policy"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "life",
+                                "synonyms": [
+                                    "life policy",
+                                    "term life policy",
+                                    "life insurance"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ClaimStatus",
+                    "values": [
+                        {
+                            "id": "all",
+                            "name": {
+                                "value": "all",
+                                "synonyms": [
+                                    "everything"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PC3",
+                            "name": {
+                                "value": "closed",
+                                "synonyms": [
+                                    "completed",
+                                    "close"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PC2",
+                            "name": {
+                                "value": "pending"
+                            }
+                        },
+                        {
+                            "id": "PC1",
+                            "name": {
+                                "value": "open",
+                                "synonyms": [
+                                    "new",
+                                    "opened"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DoctorSortPreference",
+                    "values": [
+                        {
+                            "id": "Availability",
+                            "name": {
+                                "value": "Availability",
+                                "synonyms": [
+                                    "Appointment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Rating",
+                            "name": {
+                                "value": "Rating",
+                                "synonyms": [
+                                    "feedback"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Distance",
+                            "name": {
+                                "value": "Distance",
+                                "synonyms": [
+                                    "near",
+                                    "reach"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "InOutNetwork",
+                    "values": [
+                        {
+                            "id": "NETWORKI",
+                            "name": {
+                                "value": "Out of Network",
+                                "synonyms": [
+                                    "Out",
+                                    "Out Network",
+                                    "Outside Network",
+                                    "Outside"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "NETWORKO",
+                            "name": {
+                                "value": "In Network",
+                                "synonyms": [
+                                    "In",
+                                    "In Network",
+                                    "Within Network",
+                                    "Within"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Gender",
+                    "values": [
+                        {
+                            "id": "F",
+                            "name": {
+                                "value": "Female",
+                                "synonyms": [
+                                    "Woman",
+                                    "Lady",
+                                    "Girl"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "M",
+                            "name": {
+                                "value": "Male",
+                                "synonyms": [
+                                    "Man",
+                                    "Gentleman",
+                                    "Boy"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Relationship",
+                    "values": [
+                        {
+                            "id": "Child",
+                            "name": {
+                                "value": "Child",
+                                "synonyms": [
+                                    "Kid",
+                                    "Son",
+                                    "Girl",
+                                    "Daughter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Spouse",
+                            "name": {
+                                "value": "Spouse",
+                                "synonyms": [
+                                    "Wife",
+                                    "Hubby",
+                                    "Husband"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Confirmation",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "No",
+                                "synonyms": [
+                                    "no way",
+                                    "don't",
+                                    "i don't",
+                                    "no i don't",
+                                    "never",
+                                    "Nope",
+                                    "i am good",
+                                    "Not now",
+                                    "No Thanks"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yes",
+                                "synonyms": [
+                                    "surely",
+                                    "yes i do",
+                                    "I do",
+                                    "why not",
+                                    "definitely",
+                                    "certainly",
+                                    "sure",
+                                    "yes please",
+                                    "yup",
+                                    "Yeah"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PersonalInfo",
+                    "values": [
+                        {
+                            "id": "R",
+                            "name": {
+                                "value": "Relationship",
+                                "synonyms": [
+                                    "relation"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "G",
+                            "name": {
+                                "value": "Gender",
+                                "synonyms": [
+                                    "sex"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "D",
+                            "name": {
+                                "value": "Date of birth",
+                                "synonyms": [
+                                    "birthday",
+                                    "birth date"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "L",
+                            "name": {
+                                "value": "Last Name"
+                            }
+                        },
+                        {
+                            "id": "F",
+                            "name": {
+                                "value": "First Name"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CreateClaimIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1260996737494"
+                    },
+                    "slots": [
+                        {
+                            "name": "CreateClaimDescription",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.986737951173.281907501467",
+                                "elicitation": "Elicit.Slot.986737951173.281907501467"
+                            }
+                        },
+                        {
+                            "name": "CreateClaimAmount",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.986737951173.944252307031"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SearchClaimIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.839874057594"
+                    },
+                    "slots": [
+                        {
+                            "name": "SearchClaimText",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.121043413260.1092374659085"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BenefitsDetailsIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1178353479305"
+                    },
+                    "slots": [
+                        {
+                            "name": "PolicyDetailType",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1178353479305.166146353612"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1178353479305.166146353612.691833355961",
+                                    "values": [
+                                        "vision",
+                                        "medical",
+                                        "dental",
+                                        "life"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "FindDoctorIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "PolicyDetailType",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.982977791828.929388784970"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.982977791828.929388784970.640981469305",
+                                    "values": [
+                                        "Medical",
+                                        "Dental"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "MedicalSpeciality",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.145656203631.1446509246043"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.447434635793.325863952806.429452117691",
+                                    "values": [
+                                        "Cardiologist",
+                                        "Neurological surgeon",
+                                        "Oncologist",
+                                        "NOT_APPLICABLE",
+                                        "Allergist",
+                                        "Cardiovascular surgeon",
+                                        "Neurologist",
+                                        "Dermatologist",
+                                        "Endocrinologist",
+                                        "Cardiac electrophysiologist",
+                                        "ophthalmologist",
+                                        "Physician",
+                                        "Hematologist",
+                                        "Obstetrician",
+                                        "Psychiatrist",
+                                        "Surgeon",
+                                        "pediatrician",
+                                        "Gynecologist",
+                                        "Neonatologist",
+                                        "Radiologist",
+                                        "family physician",
+                                        "Gastroenterologist",
+                                        "Anesthesiologist"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "DentalSpeciality",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.623737363835.260070007238"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.176978767457.1136685526579.1225094625220",
+                                    "values": [
+                                        "NOT_APPLICABLE",
+                                        "Periodontist",
+                                        "Oral and maxillofacial surgeon",
+                                        "Anesthesiologist",
+                                        "Endodontist",
+                                        "Prosthodontist",
+                                        "Orthodontist",
+                                        "Pediatric"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ZipCode",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.145656203631.1430782434572"
+                            }
+                        },
+                        {
+                            "name": "SortPreference",
+                            "type": "DoctorSortPreference",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1502579362547.1482427854345"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.272752885660.1539608856185.652018507664"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "InOutNetwork",
+                            "type": "InOutNetwork",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.753741755370.1096129169674"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.272752885660.1159940922202.77624959185"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PendingClaimsIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.132996020787"
+                    },
+                    "slots": [
+                        {
+                            "name": "PendingClaimDuration",
+                            "type": "AMAZON.DURATION",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "PendingClaimDate",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "PendingClaimType",
+                            "type": "ClaimStatus",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "AddDepenIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "VoicePin",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.412765084509.1481294458103"
+                            }
+                        },
+                        {
+                            "name": "FirstName",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.412765084509.487024167962"
+                            }
+                        },
+                        {
+                            "name": "LastName",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1216273708596.1339629408604"
+                            }
+                        },
+                        {
+                            "name": "DateOfBirth",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1216273708596.929696597485"
+                            }
+                        },
+                        {
+                            "name": "Gender",
+                            "type": "Gender",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1321919420779.588927228631"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1075974888976.1537713543307.91693871940"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Relationship",
+                            "type": "Relationship",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.290474432098.42452710737"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1075974888976.847805183154.1352091351737"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Phone",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.290474432098.837129680235"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FeedbackIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "UsabilityRating",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.33647717737.480945867085"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.982906211981.1254778332840.323501508704",
+                                    "values": [
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ContentRating",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.33647717737.1445028719111"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.369621287694.90387617167.1554974318461",
+                                    "values": [
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RecommendRating",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.33647717737.183767914132"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.369621287694.183721222959.58904152102",
+                                    "values": [
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "SkillRating",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.33647717737.1514276675559"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.369621287694.464618221835.1062747365334",
+                                    "values": [
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "FeedbackText",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.33647717737.1106429898717"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MailOrderPrescriptionIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "PrescriptionDate",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.369598945824.84052451424"
+                            }
+                        },
+                        {
+                            "name": "MedicineName",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.369598945824.24353401174"
+                            }
+                        },
+                        {
+                            "name": "MedicineQuantity",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.369598945824.34362043754"
+                            }
+                        },
+                        {
+                            "name": "ContinuePrescription",
+                            "type": "Confirmation",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1164951149616.196873598235"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.957855316729.1524809584790.30583836281"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "DeliveryAddressType",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.369598945824.1549127820752"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.369598945824.1549127820752.946509111689",
+                                    "values": [
+                                        "other",
+                                        "Registered"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "DeliveryAddress",
+                            "type": "AMAZON.StreetAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "UpdatePersonalInfoIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "VoicePin",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.90693432149.1488991815418"
+                            }
+                        },
+                        {
+                            "name": "FirstName",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1035691134017.940302471239"
+                            }
+                        },
+                        {
+                            "name": "PersonalInfo",
+                            "type": "PersonalInfo",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1035691134017.1075243481913"
+                            }
+                        },
+                        {
+                            "name": "ParamValue",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.613391701157.597961261947"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.986737951173.281907501467",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "In a few words describe the reason for the claim."
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.986737951173.281907501467",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just to make sure I got everything down correctly you said {CreateClaimDescription} , Is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.986737951173.944252307031",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What was the amount of the claim?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.121043413260.1092374659085",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the claim id number?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.121043413260.1092374659085",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you say {SearchClaimText} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.986737951173.944252307031",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You said this claim was for {CreateClaimAmount}"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.221719261570.647314823911",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you say you wanted know about you {PolicyDetailType} policy"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.221719261570.647314823911",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What policy would you like information on?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1393828170999.1337764844048",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "of course, what is the first name"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "sure, what's the first name?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "sure, what is the first name of the new user?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1393828170999.1337764844048",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "first name is {fname} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1393828170999.342179573535",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the last name?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.132890669425.1069732802913",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You said this claim was for {CreateClaimAmount} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1178353479305",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I understand you want to know the benefits details for {PolicyDetailType} Policy, is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1178353479305.166146353612",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the policy for which you want to know the benefits - Medical, Dental, Vision or Life?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1178353479305.166146353612.691833355961",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose one of the following - medical, dental, vision or life"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.982977791828.929388784970",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which plan you want to find the doctor for - Medical or Dental?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.982977791828.929388784970.640981469305",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose any of the Medical or Dental"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.145656203631.1446509246043",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which speciality doctor you want to find, for example, Physician, Cardiologist or Dermatologist?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.145656203631.1430782434572",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "tell me the zip code of the area and i will help you to find the nearby doctors"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.26064601059",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I see you want to find a {MedicalSpeciality} doctor in zip code {ZipCode} , is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1502579362547.1482427854345",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "In which order you would like to see the results, by distance, rating or availability"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "How would you like to sort the results. Based on distance, rating or availability?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "How do you want to see the results. Based on distance, rating or availability?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.132996020787",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want me to find claims around {PendingClaimDate} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "You want me to find claims for the {PendingClaimDuration} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "You want me to find your {PendingClaimType} claims?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1260996737494",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just to be sure, you wanted to create a claim for the amount of {CreateClaimAmount} dollars, with the description  {CreateClaimDescription} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.839874057594",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you say you wanted me to find claim number {SearchClaimText} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.623737363835.260070007238",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which speciality doctor you want to find, for example, Anesthesiologist, Endodontist or Orthodontist?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.176978767457.1136685526579.1225094625220",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please mention a valid dental speciality such as Orthodontist, Periodontist or Pediatric dentist?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.447434635793.325863952806.429452117691",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please mention a valid medical speciality such as Physician, Ophthalmologist or Gastroenterologist?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.753741755370.1096129169674",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to find In Network or Out of Network doctors?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.272752885660.1539608856185.652018507664",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose any of these - distance, rating or availability"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.272752885660.1159940922202.77624959185",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose In Network or Out of network"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.45286029911.414219901709",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the first name of the dependent?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide the first name of the dependent"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.45286029911.165231033571",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the last name of the dependent?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.45286029911.421250551985",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the date of birth of {FirstName}"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.45286029911.238222816858",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me the gender"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.45286029911.919073705008",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "and, what is the good phone number of {FirstName} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.94064358370.236693996588",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is the dependent's relationship with the primary beneficiary?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.303894841597.1523774840511.896417278540",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide a valid gender name"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.303894841597.221986079609.998545169238",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Only spouse and child can be added as dependent, please choose one of these."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1097393656050.983802221389",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide four digit voice pin for verification"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide your four digit voice pin for authentication "
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1097393656050.983802221389.1448076677199",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide four digit voice pin to authorize me to take this action"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1097393656050.983802221389.163427947397",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide four digit voice pin to authorize me to take this action"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.412765084509.1481294458103",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide your voice pin for verification"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.412765084509.487024167962",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide first name of the dependent"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1216273708596.1339629408604",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the last name of the dependent?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1216273708596.929696597485",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the date of birth of {FirstName}"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1321919420779.588927228631",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the gender?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.290474432098.42452710737",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the relationship of the dependent with Primary?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.290474432098.837129680235",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "And, what is a good phone number for {FirstName} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1075974888976.1537713543307.91693871940",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide a valid gender"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1075974888976.847805183154.1352091351737",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose a valid relationship, for example, spouse, child, son or daughter"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.33647717737.480945867085",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide your rating on the following questions on the scale of one to five, where one being the lowest and five being the highest. How do you rate the usability of the skill?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.33647717737.1445028719111",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How do you rate the skill on the content it captures?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.33647717737.183767914132",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How likely you will recommend the skill to others on the scale of one to five where one being the least likely and five being the most likely?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.33647717737.1514276675559",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How will you overall rate the skill?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.33647717737.1106429898717",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide your valuable feedback on the skill"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.982906211981.1254778332840.323501508704",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please rate at the scale of one to five, where one is the lowest and five is the highest"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.369598945824.84052451424",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide prescription date"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.369598945824.24353401174",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the name of the medicine?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the name of the medicine"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.369598945824.34362043754",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the quantity of the medicine in count or volume, for example thirty or twenty four ounce."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.369598945824.1549127820752",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Where do you want us to send your medicines, your registered address or any other address?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.369598945824.1549127820752.946509111689",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose registered address or other address"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.369598945824.189062488518",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, then please tell me the address"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1164951149616.196873598235",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, got more medicines to add?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, Do you want to continue adding medicines?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "ok, Do you want to add more medicines?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.957855316729.1524809584790.30583836281",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please choose yes or no"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1035691134017.1075243481913",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which detail you want me to update?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me which information you want to update?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1035691134017.940302471239",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide the first name of the person who's information you want to update"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.613391701157.597961261947",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the {PersonalInfo} for  {FirstName} and i will update the details to your account"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.90693432149.1488991815418",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide a valid voice pin for verification"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.369621287694.464618221835.1062747365334",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please rate at the scale of one to five, where one is the lowest and five is the highest"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.369621287694.90387617167.1554974318461",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please rate at the scale of one to five, where one is the lowest and five is the highest"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.369621287694.183721222959.58904152102",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please rate at the scale of one to five, where five is the most likely and one if the least likely"
+                    }
+                ]
+            }
+        ]
+    }
+}
